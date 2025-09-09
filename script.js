@@ -223,3 +223,11 @@ map.addEventListener("wheel", (e) => {
 
   map.style.transform = `scale(${scale})`;
 });
+
+// منع الكليك يمين على الصور فقط
+document.addEventListener("contextmenu", function(e){
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+
